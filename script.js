@@ -17,7 +17,6 @@ function addRecommendation() {
     // Add this element to the end of the list of recommendations
     // @ts-ignore
     document.getElementById("all_recommendations").appendChild(element);
-
     // Reset the value of the textarea
     // @ts-ignore
     recommendation.value = "";
@@ -25,12 +24,21 @@ function addRecommendation() {
 }
 
 // @ts-ignore
-function showPopup(bool) {
-  if (bool) {
-    // @ts-ignore
-    document.getElementById("popup").style.visibility = "visible";
+// function showPopup(bool) {
+//   if (bool) {
+//     // @ts-ignore
+//     document.getElementById("popup").style.visibility = "visible";
+//   } else {
+//     // @ts-ignore
+//     document.getElementById("popup").style.visibility = "hidden";
+//   }
+// }
+
+function showPopup(show) {
+  const popup = document.getElementById("popup");
+  if (show) {
+    popup.className = "popup popup-visible"; // On change la classe pour l'afficher
   } else {
-    // @ts-ignore
-    document.getElementById("popup").style.visibility = "hidden";
+    popup.className = "popup popup-hidden"; // On change la classe pour le cacher
   }
 }
