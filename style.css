@@ -281,8 +281,17 @@ h2 {
   transform: translate(-50%, -50%);
   text-align: center;
   position: fixed;
-  visibility: hidden;
   border: 1px solid var(--border-color);
+}
+
+/* Par défaut, le popup est rangé (caché et ne prend pas de place) */
+.popup-hidden {
+  display: none;
+}
+
+/* Quand cette classe est là, on l'affiche */
+.popup-visible {
+  display: block;
 }
 
 .popup img {
@@ -360,3 +369,4 @@ button:hover {
   text-align: center;
   cursor: pointer;
 }
+
